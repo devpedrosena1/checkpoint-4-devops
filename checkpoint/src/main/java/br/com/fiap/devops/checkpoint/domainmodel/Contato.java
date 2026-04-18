@@ -1,5 +1,6 @@
 package br.com.fiap.devops.checkpoint.domainmodel;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import java.util.Objects;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "CONTATO")
+@Table(name = "CONTATO_CP")
 public class Contato {
 
     @Id
@@ -22,7 +23,8 @@ public class Contato {
 
     @ManyToOne
     @JoinColumn(name = "USUARIO_ID")
-    private Usuario usuario;
+    @JsonBackReference
+    private @Getter @Setter Usuario usuario;
 
     @Override
     public boolean equals(Object o) {

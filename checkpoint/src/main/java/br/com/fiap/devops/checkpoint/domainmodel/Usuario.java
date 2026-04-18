@@ -1,5 +1,6 @@
 package br.com.fiap.devops.checkpoint.domainmodel;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import java.util.Objects;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "USUARIO")
+@Table(name = "USUARIO_CP")
 public class Usuario {
 
     @Id
@@ -25,6 +26,7 @@ public class Usuario {
     private @Getter @Setter String email;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private @Getter @Setter List<Contato> contatos;
 
     @Override
