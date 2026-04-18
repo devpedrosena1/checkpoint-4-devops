@@ -35,4 +35,4 @@ jobs:
         app-name: 'webapp-java-cp-rm561178'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_50cbc96ac2d146f3b20510242114fa11 }}
-        package: '${{ github.workspace }}/target/*.jar'
+        package: '${{ github.workspace }}/checkpoint/target/*.jar'
