@@ -3,3 +3,6 @@ Repositório destinado ao Checkpoint 4 da matéria de DevOps. Java Spring Boot +
 
 # Deploy da nossa aplicação:
 http://webapp-java-cp-rm561178.azurewebsites.net/swagger-ui/index.html
+
+# Link do vídeo explicativo:
+https://youtu.be/wseaZjlmJOo?si=PcVTKdL0Df80LuIN
